@@ -1,120 +1,140 @@
-body{
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: gray(187);}
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #bbb;
+}
+
 a {
-  color: #000000;
-}
-.heaader{
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3; /* content going under the header */
-
+    color: #000;
 }
 
-.heaader ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;/* Turns off bullets */
-  overflow: hidden;
-  background-color: #ffffff;
-}
-.heaader ul a{
-  display: block;/* Changing a tag to block */
-  padding: 20px;
-  border-right: 1px solid #aaa;
-  text-decoration: none;/* Removes underline */
+/* header */
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;   /* content going under the header */
 }
 
-.heaader ul a:hover{
-  background-color: #ddd;
-
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Turns off bullets */
+    overflow: hidden;
+    background-color: #fff;
 }
 
-.heaader .logo{
-  float: left;
-  display: block;
-  font-size: 2em;
-  padding: 10px 20px;
-}
-.heaader .menu{
-  clear: both;
-  max-height: 0;
-  transition: max-height.2s ease-out;/* Animation of the mobile menu ease out slows near the end */
-}
-.heaader .menu-icon{
-  padding: 28px 20px;
-  position: relative;
-  float: right;
-  cursor: pointer;
+.header li a {
+    display: block; /* Changing a tag to block */
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none; /* Removes underline */
 }
 
-.heaader.menu-icon .nav-icon{
-  background: darkgray;
-  display: block;
-  height: 2px;
-  width: 18px;
-  position: relative;
-  transition: background .2s ease-out; /* For animating rotation on the icon*/
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
 }
 
-.heaader .menu-icon .nav-icon:before{
-   background: #333;
-  content: "";
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 5px; /* Moves down from the top to bottom */
-  transition:all .2s ease-out;
-}
-
-.heaader .menu-icon .nav-icon:after {
-  background: #333;
-  content: "";
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: -5px;
-  transition:all .2s ease-out;
-}
-
-.heaader .menu-button {
-  display: none;
-}
-
-.heaader .menu-button:checked ~ .menu { /* Creates an animation bcs of the transition in menu selector */
-  max-height: 240px;
-
-}
-.heaader .menu-button:checked ~ .menu-icon .nav-icon{
-  background: transparent;
-}
-
-.heaader .menu-button:checked ~ .menu-icon .nav-icon:before{
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.heaader .menu-button:checked ~ .menu-icon .nav-icon:after{
-  transform: rotate(45deg);
-  top: 0;
-}
-@media (min-width: 48em) {
-
-  .heaader li{
+.header .logo {
+    display: block;
     float: left;
-  }
-  .heaader li a{
-    padding: 20px 30px;
-  }
-  .heaader .menu{
-    clear: none;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out; /* Animation of the mobile menu ease out slows near the end */
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
     float: right;
-    max-height: none;
-  }
-  .heaader .menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out; /* For animating rotation on the icon*/
+    width: 18px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
     display: none;
-  }
+}
+
+/* Creates an animation bcs of the transition in menu selector */
+
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* resizing */
+
+@media (min-width: 768px) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
 }
