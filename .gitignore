@@ -2,3 +2,4 @@
 .idea/aws.xml
 *.xml
 .idea/web-project.iml
+debug.log
