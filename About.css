@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Container for flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+    flex: 25%;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .column {
+        flex: 50%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
