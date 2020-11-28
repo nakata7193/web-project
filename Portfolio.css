@@ -1,69 +1,129 @@
-.img-gallery {
+body{
+    margin:0 20px 20px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+h1{
+    display:inline-block;
+    border-bottom:3px solid black;
+    padding-bottom:2px;
+    margin-top: 120px;
+    margin-bottom: 70px;
+    font-size: 60px;
+    font-family: "Comic Sans MS";
+}
+
+.gallery{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: 15px;
-    grid-template-areas: 'img-1 img-2 img-2'
-                         'img-1 img-3 img-4'
-                         "img-1 img-5 img-4 "
-                         "img-6 img-6 img-7 "
-                         "img-8 img-8 img-7 "
-                         "img-9 img-9 img-7 ";
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    grid-auto-flow:row dense;
 }
-.img-1 {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-}
-
-.img-2{
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-}
-
-.img-3 {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-}
-
-.img-4  {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-}
-
-.img-5 {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
-}
-
-.img-6{
-    grid-area: img-6;
+.img-gallery{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    position: relative;
 }
 
-.img-7{
-    grid-area: img-7;
+.img-gallery .gallery-item {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow: hidden;
 }
-
-.img-8{
-    grid-area: img-8;
+.img-gallery .gallery-item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;  /* fits the img to the grid */
+    object-position: 50% 50%; /* fits the center of the img on resize */
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.img-gallery:hover .gallery-item img{
+    transform: scale(1.5); /* img getting bigger on hover */
+}
+/* setting up hover text animation */
+.img-gallery .text{
+    opacity: 0; /* invisible text till hover */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* adjusting the text so its right on the center */
+    color: #fff;
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 4;
+    transition: .3s ease-in-out;
+}
+.img-gallery:hover .text{ /* text animation */
+    opacity: 1;
+    animation: move-down .3s linear;
+    padding: 1em;
+    width: 100%;
+
 }
 
-.img-9{
-    grid-area: img-9;
-    width: 1600px;
-    height: 900px;
-    object-fit: cover;
+.w-1{
+    grid-column:span 1;
 }
+.w-2{
+    grid-column:span 2;
+}
+.w-3{
+    grid-column:span 3;
+}
+.w-4{
+    grid-column:span 4;
+}
+.w-5{
+    grid-column:span 5;
+}
+.w-6{
+    grid-column:span 6;
+}
+
+
+.h-1{
+    grid-row:span 1;
+}
+.h-2{
+    grid-row:span 2;
+}
+.h-3{
+    grid-row:span 3;
+}
+.h-4{
+    grid-row:span 4;
+}
+.h-5{
+    grid-row:span 5;
+}
+.h-6{
+    grid-row:span 6;
+}
+
+@media only screen and (max-width: 500px){
+    .gallery {
+        grid-template-columns:repeat(1,1fr);
+        }
+
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6 {
+        grid-column: span 1;
+    }
+
+}
+
+
+@keyframes move-down { /* declaring the text animation */
+    0%{
+        top: 10%;     /* text sliding from the top till animation is casting  */
+    }
+    50%{
+        top: 35%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+

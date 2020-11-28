@@ -1,0 +1,69 @@
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 15px;
+    grid-template-areas: 'img-1 img-2 img-2'
+                         'img-1 img-3 img-4'
+                         "img-1 img-5 img-4 "
+                         "img-6 img-6 img-7 "
+                         "img-8 img-8 img-7 "
+                         "img-9 img-9 img-7 ";
+}
+.img-1 {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.img-2{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.img-3 {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.img-4  {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.img-5 {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.img-6{
+    grid-area: img-6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-7{
+    grid-area: img-7;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-8{
+    grid-area: img-8;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-9{
+    grid-area: img-9;
+    width: 1600px;
+    height: 900px;
+    object-fit: cover;
+}

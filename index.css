@@ -1,8 +1,10 @@
 body {
     margin: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif,"Comic Sans MS";
     background-color: #bbbbbb;
 }
+
+
 
 a {
     color: #000;
@@ -39,12 +41,13 @@ a {
     background-color: #f4f4f4;
 }
 
-.header .logo {
+.header .logo{
     display: block;
     float: left;
     font-size: 2em;
     padding: 10px 20px;
     text-decoration: none;
+    font-family: "Comic Sans MS", serif;
 }
 
 /* menu */
@@ -54,7 +57,9 @@ a {
     max-height: 0;
     transition: max-height .2s ease-out; /* Animation of the mobile menu ease out slows near the end */
 }
-
+li {
+    font-size: 22px;
+}
 /* menu icon */
 
 .header .menu-icon {
