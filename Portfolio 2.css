@@ -9,6 +9,7 @@ body{
     grid-auto-rows: 100px 300px;
     grid-gap: 10px;
     grid-auto-flow: dense;
+    position: center;
 }
 .img-gallery{
     width: 100%;
@@ -91,9 +92,8 @@ body{
 .h-6{
     grid-row:span 6;
 }
-@media{ screen and ( max-width)
 
-}
+
 
 
 @keyframes move-down { /* declaring the text animation */
