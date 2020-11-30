@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    background: #fff;
 }
 
 /* Container for flexbox */
@@ -62,4 +61,10 @@ img{
     width: 100%;
     height: auto;
     margin: 20px;
+}
+
+footer{
+    color: #000000;
+    display: block;
+    text-align: center;
 }

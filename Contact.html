@@ -1,19 +1,75 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <title>Contact</title>
     <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+<nav class="header">
+    <a href="About.html" class="logo"><b>AC</b> Photography</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+    <ul class="menu">
+        <li><a href="About.html">Home</a></li>
+        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-<div class="social-media-content">
-    
 
+
+<main>
+    <h1 class="h1">Contact</h1>
+
+<div class="form">
+
+    <form action="action_page">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="e-mail">Last Name</label>
+        <input type="text" id="e-mail" name="lastname" placeholder="Enter your e-mail">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </form>
 </div>
+</main>
+<div id="social">
+    <ul class="ul">
+        <li class="facebook">
+            <button class="border"><i class="fa fa-facebook"></i></button>
+        </li>
+
+        <li class="twitter">
+            <button class="border"><i class="fa fa-twitter"></i></button>
+        </li>
+
+        <li class="instagram">
+            <button class="border"><i class="fa fa-instagram"></i></button>
+        </li>
+
+        <li class="dribbble">
+            <button class="border"><i class="fa fa-dribbble"></i></button>
+        </li>
+    </ul>
+</div>
+
+<footer>
+    <p>Author: Atanas Cholakov</p>
+    <p><a id="email-link" href="atanas925@gmail.com">atanas925@gmail.com</a></p>
+  </footer>
 
 </body>
 </html>

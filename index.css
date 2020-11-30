@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Helvetica, sans-serif,"Comic Sans MS";
-    background-color: #bbbbbb;
+    background-color: #fff;
 }
 
 
@@ -144,26 +144,4 @@ li {
         display: none;
     }
 }
-
-footer{
-   width: 100vw;
-    display: block;
-    overflow: hidden;
-    padding: 70px 0;
-    box-sizing: border-box;
-    background-color: #18181a;
-}
-
-.inner-footer .logo-container {
-    width: 35%;
-    float: left;
-    height: 100%;
-    display: block;
-}
-
-.inner-footer .logo-container img {
-    width: 65px;
-    height: auto;
-}
-
 
